@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Transaction extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'name', 'category_id', 'date', 'amount', 'note', 'image'];
+    protected $fillable = [ 'name', 'category_id', 'date_transaction', 'amount', 'note', 'image'];
 
     public function category():BelongsTo
     {
