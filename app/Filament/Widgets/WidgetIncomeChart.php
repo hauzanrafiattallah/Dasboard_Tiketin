@@ -25,7 +25,7 @@ class WidgetIncomeChart extends ChartWidget
         Carbon::parse($this->filters['endDate']) :
         now();
 
-        $data = Trend::query(Transaction::incomes())
+        $data = Trend::query(Transaction::query()->incomes())
             ->between(
                 start: $startDate,
                 end: $endDate,
